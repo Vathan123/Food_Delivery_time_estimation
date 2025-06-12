@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Estimation</title>
+    <style>
+     
+
+        div {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,select {
+            padding: 8px;
+            width: 200px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+<form action="/Output" method="POST"> 
+
+        <h1>Food Delivery Estimation</h1>
+        <label for="Delivery_person_Age">Delivery_Person_Age:</label>
+        <input type="number" id="Delivery_person_Age" name="Delivery_person_Age">
+
+        <label for="Delivery_person_Ratings">Delivery Person's Rating  :</label>
+        <input type="text" id="Delivery_person_Ratings" name="Delivery_person_Ratings" placeholder="Enter rating (e.g., 4.5)">
+
+        <label for="Time_Orderd">Time Ordered  :</label>
+        <input type="text" id="Time_Orderd" name="Time_Orderd">
+
+        <label for="Time_Order_picked">Time_Order_picked</label>
+        <input type="text" id="Time_Order_picked" name="Time_Order_picked" <br>
+        
+        <p>Wheatherconditions</p>
+        <select name="Weatherconditions" id="Wheatherconditions">
+            <option value="Sunny">Sunny</option>
+            <option value="Windy">Windy</option>
+            <option value="Sandstorms">Sandstorms</option>
+            <option value="Cloudy">Cloudy</option>
+            <option value="Stormy">Stormy</option>
+            <option value="Fog">Fog</option>
+          </select>
+
+        <p>Road_traffic_density</p>
+        <select name="Road_traffic_density" id="Road_traffic_density">
+            <option value="High ">High</option>
+            <option value="Medium ">Medium</option>
+            <option value="Jam ">Jam</option>
+            <option value="Low ">Low</option> 
+        </select>
+
+        <label for="Vehicle_condition">Vehicle_condition</label>
+        <input type="number" id="Vehicle_condition" name="Vehicle_condition" min="0" max="3">
+
+        <p>Type_of_order</p>
+        <select name="Type_of_order" id="Type_of_order">
+            <option value="Snack ">Snack</option>
+            <option value="Meal ">Meal</option>
+            <option value="Drinks ">Drinks</option>
+            <option value="Buffet ">Buffet</option> 
+        </select>
+
+        <p>Type_of_vehicle</p>
+        <select name="Type_of_vehicle" id="Type_of_vehicle">
+            <option value="motorcycle ">motorcycle</option>
+            <option value="scooter ">scooter</option>
+            <option value="electric_scooter ">electric_scooter</option>
+            <option value="bicycle ">bicycle</option> 
+        </select>
+
+        <label for="multiple_deliveries">multiple_deliveries</label>
+        <input type="number" id="multiple_deliveries" name="multiple_deliveries" min="0" max="3">
+
+        <p>Festival</p>
+        <select name="Festival" id="Festival">
+            <option value="Yes ">yes</option>
+            <option value="No ">no</option>
+        </select>
+
+        <label for="distance">distance</label>
+        <input type="float" id="distance" name="distance" placeholder="Enter rating (e.g., 4.5)">
+
+        
+        <p>City</p>
+        <select name="City" id="City">
+            <option value="Metropolitian ">Metropolitian</option>
+            <option value="Urban ">Urban</option>
+            <option value="Semi-Urban ">Semi-Urban</option> 
+        </select>
+        <button type="proceed">Predict</button>
+         </form>
+ 
+    
+ 
+    </div>
+</body>
+</html>
