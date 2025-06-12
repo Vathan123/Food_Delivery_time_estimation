@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.creativemarket.com/0.1.0/ps/7358571/1820/1213/m1/fpnw/wm1/yhkghshrdewym9cqaf6dydfgaym5exkmox3demunpyzo6v0nfog8cwdotjqhyb1w-.jpg?1574657243&s=63f255806cf9d9dfa9c86f3d340cce03') no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(10px); /* Adjust brightness as needed */
+            color: #f6f0f0; /* Red text color */
+        }
+
+ 
+
+        main {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button {
+            margin: 0 10px;
+            
+        }
+        .button1 {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            bottom: 10px;
+            position: absolute;
+            left: 45%;
+            bottom: 10%
+        }
+      
+    </style>
+</head>
+<body>
+
+<header>
+     
+   <center>
+    <p style="font-size: 35px; font-weight: bold;">Food Delivery  </p>
+    
+   </center> 
+    
+    <div class="button">
+        <button>Home</button>
+        <button>About</button>
+        <button>Contact</button>
+    </div>
+</header>
+
+<main>
+    <img src="https://cdn1.iconfinder.com/data/icons/food-delivey/85/food_delivery_bicycle_bike_courier-1024.png" alt="Food Delivery Image 1" style="float: right-corner; width: 30%;">
+
+    <p style="font-size: 35px; font-weight: bold;">Food Delivery Estimation</p>
+    <p style="font-size: 15px; font-weight: bold;">Estimation of time taken for the delivery</p>
+</main>
+<div class="button1">
+    <form action="/predict" method="GET">
+        <button type="submit" class="button1" >proceed </button>
+    </form>
+</div>
+
+</body>
+</html>
