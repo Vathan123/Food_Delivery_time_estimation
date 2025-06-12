@@ -1,7 +1,13 @@
 from flask import Flask,render_template,request
 import numpy as np
 import pickle
-model=pickle.load(open("/Food delevery/Flask/rf.pkl",'rb'))
+import gdown
+url="https://drive.google.com/uc?id=1tRexyzsHm5yNaEyOtPi5lvGfp8ALruRZ"
+output='rf.pkl'
+gdown.download(url,output,quiet=False)
+with open(output,'rb') as f:
+     model=pickle.load(f)
+# model=pickle.load(open("/Flask/rf.pkl",'rb'))
 scaler=pickle.load(open("/Food delevery/Flask/ss.pkl",'rb'))
 encoder1=pickle.load(open("/Food delevery/Flask/Time_Orderd.pkl",'rb'))
 encoder2=pickle.load(open("/Food delevery/Flask/Time_Order_picked.pkl",'rb'))
